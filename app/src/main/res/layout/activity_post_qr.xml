@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".PostQR">
 
 
@@ -14,16 +15,50 @@
         android:orientation="vertical">
 
 
-
         <TextView
-            android:id="@+id/textVi"
-            android:paddingTop="15dp"
+            android:id="@+id/scan_format"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="QR"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
 
+            android:layout_marginTop="100dp"
+
+
+            android:textColor="@color/cast_expanded_controller_background_color"
+            android:textIsSelectable="true"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/scan_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:layout_marginTop="150dp"
+
+
+            android:textColor="@color/cast_expanded_controller_background_color"
+            android:textIsSelectable="true"
+            android:textSize="24sp" />
+
+        <Button android:id="@+id/scan_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Scan"
+
+            android:textColor="@color/cardview_light_background"
+            android:elevation="@dimen/cardview_default_elevation"
+            android:background="@color/colorAccent"
+            android:layout_marginHorizontal="75dp"
+            android:layout_marginTop="200dp"/>
 
     </LinearLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="11dp"
+
+        />
 </RelativeLayout>
