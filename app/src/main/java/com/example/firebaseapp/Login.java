@@ -86,6 +86,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         progressDialog.setMessage("Logging...");
         progressDialog.show();
 
+
         //logging in the user
         firebaseAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {

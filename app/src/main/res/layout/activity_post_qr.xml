@@ -46,9 +46,9 @@
 
             android:text="Scan"
 
-            android:textColor="@color/cardview_light_background"
+            android:textColor="@color/cast_expanded_controller_background_color"
             android:elevation="@dimen/cardview_default_elevation"
-            android:background="@color/colorAccent"
+
             android:layout_marginHorizontal="75dp"
             android:layout_marginTop="200dp"/>
 
