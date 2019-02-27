@@ -41,35 +41,6 @@
             android:text="Large Text"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
-        <Button
-            android:id="@+id/buttonScanQR"
-            android:paddingTop="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:baselineAligned="false"
-            android:text="Start Lesson" />
 
-        <Button
-            android:id="@+id/buttonSchedule"
-            android:paddingTop="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Show schedule" />
-
-        <Button
-            android:id="@+id/buttonOldClasses"
-            android:paddingTop="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Past Lessons" />
-
-        <Button
-            android:id="@+id/buttonLogout"
-            android:paddingTop="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:baselineAligned="false"
-            android:text="Logout" />
     </LinearLayout>
 </RelativeLayout>

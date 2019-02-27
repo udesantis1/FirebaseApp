@@ -17,15 +17,13 @@ import android.widget.TextView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class ProfileActivity extends AppCompatActivity implements View.OnClickListener {
+public class ProfileActivity extends AppCompatActivity {
 
     //firebase auth object
     private FirebaseAuth firebaseAuth;
 
     //view objects
     private TextView textViewUserEmail;
-    private Button buttonLogout, buttonQR, buttonSchedule, buttonClasses;
-
 
 
 
@@ -56,22 +54,13 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
         //getting current user
         FirebaseUser user = firebaseAuth.getCurrentUser();
-
         //initializing views
         textViewUserEmail = (TextView) findViewById(R.id.textViewUserEmail);
-        buttonLogout = (Button) findViewById(R.id.buttonLogout);
-        buttonQR = (Button) findViewById(R.id.buttonScanQR);
-        buttonSchedule = (Button) findViewById(R.id.buttonSchedule);
-        buttonClasses = (Button) findViewById(R.id.buttonOldClasses);
 
         //displaying logged in user name
         textViewUserEmail.setText("Welcome "+user.getEmail());
 
-        //adding listener to button
-        buttonLogout.setOnClickListener(this);
-        buttonQR.setOnClickListener(this);
-        buttonClasses.setOnClickListener(this);
-        buttonSchedule.setOnClickListener(this);
+
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -98,31 +87,5 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     };
 
 
-    @Override
-    public void onClick(View view) {
-        //if logout is pressed
-        if(view == buttonLogout){
-            //logging out the user
-            firebaseAuth.signOut();
-            //closing activity
-            finish();
-            //starting login activity
-            startActivity(new Intent(this, Login.class));
-        }
-        if(view == buttonQR)
-        {
 
-            startActivity(new Intent(this, PostQR.class));
-        }
-        if(view == buttonSchedule)
-        {
-
-            startActivity(new Intent(this, Schedule.class));
-        }
-        if(view == buttonClasses)
-        {
-
-            startActivity(new Intent(this, PastClasses.class));
-        }
-    }
 }
